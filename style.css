@@ -1,0 +1,141 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-size: 15px;
+	font-family: "Poppins", sans-serif;
+	color: hsl(229, 6%, 66%);
+	font-weight: 200;
+}
+body{
+	height: 100vh;
+	background-color: hsl(0, 0%, 98%);
+}
+main{
+	margin: 50px 0;
+	display: grid;
+	gap: 40px;
+	height: 100%;
+	align-items: center;
+}
+.encabezado{
+	width: 35%;
+	margin: 0 auto;
+	align-self: flex-end;
+}
+#header1{
+	font-weight: 200;
+}
+#header2{
+	font-weight: 600;
+	padding-bottom: 10px;
+}
+.title,.description{
+		text-align: center;
+}
+.title{
+	font-size: 36px;
+	color: hsl(234, 12%, 34%);
+}
+.title-block{
+	font-weight: 600;
+	font-size: 24px;
+	color: hsl(234, 12%, 34%);
+}
+.block{
+	align-self: flex-start;
+	padding: 20px;
+	display: grid;
+	gap: 20px;
+	grid-template: 1fr 1fr / 27% 27% 27%;
+	grid-template-areas: 
+	"footer main header"
+	"footer section header";
+	justify-content: center;
+}
+
+.block2,.block1,.block3,.block4{
+	box-shadow: 0 10px 25px hsl(229, 6%, 66%, 0.4);
+	gap: 10px;
+	font-weight: 600;
+	padding: 25px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	border-radius: 5px;
+	background-color: white;
+}
+.block1{
+	border-top: 5px solid hsl(180, 62%, 55%) ;
+	align-self: center;
+	grid-area:footer ;
+}
+.block2{
+	border-top: 5px solid hsl(0, 78%, 62%);
+	grid-area: main;
+}
+.block3{
+	border-top: 5px solid hsl(34, 97%, 64%);
+	grid-area: section;
+}
+.block4{
+	border-top: 5px solid hsl(212, 86%, 64%);
+	align-self: center;
+	grid-area: header;
+}
+svg{
+	padding-top: 25px;
+	align-self: flex-end;
+}
+@media(width<800px){
+	.block{
+	align-self: flex-start;
+	padding: 20px;
+	display: grid;
+	gap: 20px;
+	grid-template: 1fr 1fr / 45% 45%;
+	grid-template-areas: 
+	"footer header"
+	"main section ";
+	justify-content: center;
+	}
+	.block2,.block1,.block3,.block4{
+		box-sizing: border-box;
+		height: 100%;
+	}
+}
+@media(width<376px){
+	*{font-size:12px;
+	}
+	.block{
+	align-self: flex-start;
+	padding: 20px;
+	display: grid;
+	gap: 20px;
+	grid-template: 1fr 1fr 1fr 1fr / 90%;
+	grid-template-areas: 
+	"footer"
+	"main"
+	"section"
+	"header";
+	justify-content: center;
+	}
+	.encabezado{
+		box-sizing: border-box;
+	padding: 80px 30px 20px;
+	width: 100%;
+	margin: 0 auto;
+	align-self: flex-end;
+	}
+	.title{
+	font-size: 24px;
+	color: hsl(234, 12%, 34%);
+	}
+	.title-block{
+	font-weight: 600;
+	font-size: 18px;
+	color: hsl(234, 12%, 34%);
+	}
+	.description{
+		font-size: 16px;
+	}
+}
